@@ -14,7 +14,7 @@ function Coin({
   return (
     <Link href="/coin/[id]" as={`/coin/${id}`}>
       <a>
-        <div className="justify-between p-5 items-center inline-flex text-base font-bold text-gray-300 h-20 w-full hover:bg-gray-500">
+        <div className="justify-between p-5 items-center flex text-base font-bold text-gray-300 h-20 w-full hover:bg-gray-500">
           {/* ---------icon and name---------- */}
           <div
             className="flex w-32 
@@ -27,19 +27,23 @@ function Coin({
               alt={name}
               className="object-contain "
             />
-            <p className="tracking-wide ml-3 ">{name}</p>
+            <p className="tracking-wide ml-3 text-left">{name}</p>
           </div>
           {/* -----------symbol----------- */}
-          <div className=" uppercase tracking-wide ">{symbol}</div>
+          <div className="p-2 uppercase tracking-wide  text-left">{symbol}</div>
           {/* -------------------price------------ */}
-          <div className=" ">${price}</div>
+          <div className="p-2 text-left">${price}</div>
           {/* -------------------volume---------------- */}
-          <div className=" ">${volume.toLocaleString()}</div>
+          <div className="p-2 text-left">${volume.toLocaleString()}</div>
           {/* ---------------price change-------------- */}
           {priceChange < 0 ? (
-            <div className="  text-red-600">{priceChange.toFixed(2)}%</div>
+            <div className="text-left p-2 text-red-600">
+              {priceChange.toFixed(2)}%
+            </div>
           ) : (
-            <div className=" text-green-600">{priceChange.toFixed(2)}%</div>
+            <div className="text-left p-2 text-green-600">
+              {priceChange.toFixed(2)}%
+            </div>
           )}
 
           {/* --------------mkt cap---------- */}

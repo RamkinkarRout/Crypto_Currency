@@ -3,7 +3,11 @@ import Image from "next/image";
 import { Navbar } from "../components/Navbar";
 import Coin from "../components/Coin";
 import bitcoin from "../public/images/bitcoin.png";
-export default function Home({ resCoin }) {
+import { Button } from "@material-ui/core";
+import Router from "next/router";
+
+export default function Home({ resCoin, page }) {
+  console.log(page);
   return (
     <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-black ">
       <Head>
@@ -40,18 +44,37 @@ export default function Home({ resCoin }) {
           );
         })}
       </div>
+
+      <div className="mx-auto mt-5 flex justify-center items-center space-x-6">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => Router.push(`/?page=${page + 1}`)}
+        >
+          Next
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => Router.push(`/?page=${page - 1}`)}
+          disabled={page <= 1}
+        >
+          Prev
+        </Button>
+      </div>
     </div>
   );
 }
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({ query: { page = 1 } }) => {
   const data = await fetch(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false' \
-  -H 'accept: application/json"
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=${page}&sparkline=false' \
+  -H 'accept: application/json`
   );
   const resCoin = await data.json();
   return {
     props: {
-      resCoin,
+      resCoin: resCoin,
+      page: parseInt(page, 20),
     },
   };
 };
