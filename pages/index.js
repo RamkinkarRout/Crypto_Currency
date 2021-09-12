@@ -26,8 +26,8 @@ export default function Home({ resCoin, page }) {
         </div>
         <div className=" text-sm tracking-wider text-center -mt-2">Tacker</div>
       </div>
-      <div className="container bg-gray-900 border border-green-300 mx-auto p-2">
-        <div className="flex items-center justify-between p-5  mx-auto text-lg leading-wide tracking-wider text-green-400 bg-gray-700 ">
+      <div className="container bg-gray-900 border border-blue-400 mx-auto p-2">
+        <div className="flex items-center justify-between p-5  mx-auto text-lg leading-wide tracking-wider text-blue-500 bg-gray-700 ">
           <div className="text-right">Name</div>
           <div>Symbol</div>
           <div>Price</div>
@@ -56,17 +56,17 @@ export default function Home({ resCoin, page }) {
         <Button
           variant="contained"
           color="primary"
-          onClick={() => Router.push(`/?page=${page + 1}`)}
-        >
-          Next
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
           onClick={() => Router.push(`/?page=${page - 1}`)}
           disabled={page <= 1}
         >
           Prev
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => Router.push(`/?page=${page + 1}`)}
+        >
+          Next
         </Button>
       </div>
     </div>

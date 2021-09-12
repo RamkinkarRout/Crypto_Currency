@@ -1,7 +1,7 @@
 import Image from "next/image";
 function Detail_coin({ coin }) {
   return (
-    <div className="absolute inset-0 container m-auto border border-l-8 border-r-8 p-6 border-green-400 flex flex-col justify-center items-center bg-gradient-to-r from-black via via-gray-800 to-gray-900 text-gray-300">
+    <div className="absolute inset-0 container m-auto border border-l-8 border-r-8 p-6 border-blue-500 flex flex-col justify-center items-center bg-gradient-to-r from-black via via-gray-800 to-gray-900 text-gray-300">
       <div className="p-5 mb-9">
         {/* --------image-------- */}
         <Image
@@ -12,7 +12,7 @@ function Detail_coin({ coin }) {
           className="mb-2 object-contain"
         />
       </div>
-      <div className="tracking-wider font-bold uppercase mb-2 text-green-400">
+      <div className="tracking-wider font-bold uppercase mb-2 text-blue-500">
         {coin.name}
         {/* --------name-------- */}
       </div>
