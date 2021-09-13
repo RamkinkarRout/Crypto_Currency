@@ -1,10 +1,12 @@
 ##Check out #Crypto_tracker website -
+
 https://crypto-currency-6r2wg5e77-ramkinkarrout.vercel.app/
 #Simple Pagination
 #Authentication
 #Dynamic Pages
 
 ##Tools-
+
 #Next js
 #Tailwind Css
 #Google Authentication
