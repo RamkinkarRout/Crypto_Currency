@@ -1,3 +1,23 @@
+##Check out #Crypto_tracker website -
+https://crypto-currency-6r2wg5e77-ramkinkarrout.vercel.app/
+#Simple Pagination
+#Authentication
+#Dynamic Pages
+
+##Tools-
+#Next js
+#Tailwind Css
+#Google Authentication
+#Currency Formatter
+
+##screenshots
+
+![Screenshot (4)](https://user-images.githubusercontent.com/26031892/133066896-a1553948-9e49-481b-95ba-26ac2ec02a68.png)
+![Screenshot (5)](https://user-images.githubusercontent.com/26031892/133066909-b1e2b7ee-4934-4b68-b5b8-8125b88c9562.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/26031892/133066915-5a6aa0e8-15cc-4e96-9ce4-111c24632ca8.png)
+![Screenshot (7)](https://user-images.githubusercontent.com/26031892/133066921-288b5919-0393-4e19-a842-51ea68d9d407.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
